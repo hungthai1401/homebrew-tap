@@ -24,7 +24,12 @@ class Occtx < Formula
   end
 
   def install
-    bin.install "occtx"
+    # Simply install and rename the downloaded binary to 'occtx'
+    if OS.mac?
+      bin.install (Hardware::CPU.arm? ? "occtx-macos-aarch64" : "occtx-macos-x86_64") => "occtx"
+    else
+      bin.install (Hardware::CPU.arm? ? "occtx-linux-aarch64" : "occtx-linux-x86_64") => "occtx"
+    end
   end
 
   test do
