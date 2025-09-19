@@ -6,20 +6,20 @@ class Occtx < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/hungthai1401/occtx/releases/download/v0.1.0/occtx-macos-aarch64"
-      sha256 "9335f18c50bc2dd7ee9984183476a04e001fd71b22f222b0c618470ba6d6898b"
+      sha256 "f491195cc7574887d25bbd4c4380863f8b27a33f4113c1228800404d4f776479"
     else
       url "https://github.com/hungthai1401/occtx/releases/download/v0.1.0/occtx-macos-x86_64"
-      sha256 "0dd8ff2966a0d4ac1a4cea6186e7f91fb02f9c5969529666394e6522be3e2791"
+      sha256 "4f1fa1ae522b1be32445a7f2abd295915d155e2d451ce81138e6be24d8ee63d8"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/hungthai1401/occtx/releases/download/v0.1.0/occtx-linux-aarch64"
-      sha256 "0a0d1d16690147f95739478f9e28fcf2811984c485ca73e99eb642528106f2be"
+      sha256 "5e9eb0caebc501af79e1f6e0b481a16f453ae01176f8dd3bcbf9ade441b8601f"
     else
       url "https://github.com/hungthai1401/occtx/releases/download/v0.1.0/occtx-linux-x86_64"
-      sha256 "1cbffe3ba351ead306c5afebffc62348c45a1a3eb5e76d74e30cfb79c4e81eb0"
+      sha256 "43039d436b8dce3adc80747293f14e15e0bd7d83811eb1f7268d675929f54e8b"
     end
   end
 
