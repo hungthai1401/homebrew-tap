@@ -26,15 +26,9 @@ class Oc < Formula
   end
 
   def install
-    # Determine the correct directory name based on platform and architecture
-    if OS.mac?
-      dir = Hardware::CPU.arm? ? "opencode-darwin-arm64" : "opencode-darwin-x64"
-    else
-      dir = Hardware::CPU.arm? ? "opencode-linux-arm64" : "opencode-linux-x64"
-    end
-    
-    # Install the binary as 'oc'
-    bin.install "#{dir}/bin/opencode" => "oc"
+    # Homebrew strips the single top-level directory from the archive,
+    # so the staging root contains bin/opencode directly.
+    bin.install "bin/opencode" => "oc"
   end
 
   test do
